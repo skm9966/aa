@@ -1,0 +1,152 @@
+/* Base setup and Deep Dark UI background */
+body {
+  background-color: #0b0f19;
+  background-image: radial-gradient(circle at top right, #1e1b4b, #0b0f19);
+  font-family: "Inter", "Padauk", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Mobile wrapper limits width to look like a mobile app even on Desktop */
+.mobile-wrapper {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* On screens larger than typical mobile, make it look like a floating phone screen */
+@media (min-width: 480px) {
+  .mobile-wrapper {
+    min-height: 85vh;
+    height: auto;
+    border-radius: 40px;
+    box-shadow:
+      0 25px 50px -12px rgba(0, 0, 0, 0.5),
+      0 0 100px rgba(139, 92, 246, 0.15);
+    border: 8px solid #1f2937;
+  }
+}
+
+/* Ambient glowing shape orbs */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.shape-1 {
+  top: -50px;
+  left: -50px;
+  width: 250px;
+  height: 250px;
+  background: rgba(139, 92, 246, 0.4); /* Purple UI glow */
+}
+
+.shape-2 {
+  bottom: 10%;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  background: rgba(236, 72, 153, 0.3); /* Pink UI glow */
+}
+
+.content-container {
+  padding: 2.5rem 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Typography styles */
+.app-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(to right, #c084fc, #f472b6); /* Gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.75rem;
+}
+
+.app-description {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* Image Showcase and floating animation */
+.app-showcase {
+  perspective: 1000px;
+  animation: float 6s ease-in-out infinite; /* Hovering effect */
+}
+
+.glow-effect {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background: rgba(168, 85, 247, 0.5);
+  filter: blur(60px);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.app-mockup {
+  max-width: 75%;
+  border-radius: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.app-mockup:hover {
+  transform: translateY(-8px) scale(1.03); /* Pops out slightly on hover */
+}
+
+/* Google Play Button interaction */
+.playstore-btn {
+  display: inline-block;
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+.playstore-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.play-badge {
+  width: 220px;
+  height: auto;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+}
+
+/* Keyframes for smooth floating */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

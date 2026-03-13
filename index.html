@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="my">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>App Landing Page</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts for English & Burmese -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Padauk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="mobile-wrapper">
+      <!-- Floating shapes for background ambient effect -->
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+
+      <main class="content-container d-flex flex-column h-100">
+        <!-- Header Section -->
+        <header class="text-center mt-4">
+          <div class="app-logo-placeholder mb-3">
+            <!-- Icon Placeholder -->
+            <!-- <img
+              src="https://cdn-icons-png.flaticon.com/512/3592/3592816.png"
+              alt="App Logo"
+              width="65"
+            /> -->
+          </div>
+          <h1 class="app-title">DMNL</h1>
+          <p class="app-description">
+            သင့်ရဲ့နေ့စဉ်ဘဝကို ပိုမိုလွယ်ကူစေဖို့<br />အခုပဲ
+            ဒေါင်းလုဒ်ရယူလိုက်ပါ။
+          </p>
+        </header>
+
+        <!-- Center App Showcase -->
+        <section
+          class="app-showcase flex-grow-1 d-flex justify-content-center align-items-center position-relative my-4"
+        >
+          <!-- Glowing shadow behind the phone -->
+          <div class="glow-effect"></div>
+          <!-- Using a high-quality placeholder phone format from Unsplash (can replace with actual app screenshot) -->
+          <img
+            src="https://play-lh.googleusercontent.com/fNvN8Iycpng4xgbBnZVmWwjbYX4gpMT05HUyj7Rm_tBEcqaXMI9L6FmTVpTrRywkkRg=w480-h960-rw"
+            alt="App Screen Mockup"
+            class="app-mockup img-fluid"
+          />
+        </section>
+
+        <!-- Bottom CTA (Call to Action) Section -->
+        <footer class="footer-cta text-center mt-auto mb-4">
+          <a href="https://play.google.com/store/apps/details?id=com.dmnl.myanmarspelling&hl=en" class="playstore-btn">
+            <!-- High res Google Play Badge -->
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Get it on Google Play"
+              class="play-badge"
+            />
+          </a>
+          <p class="mt-3 small pb-2" style="color: rgb(251, 253, 255);">
+            Android 5.0 နှင့်အထက်တွင် အသုံးပြုနိုင်သည်
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Bootstrap JS (Optional, for advanced elements) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
